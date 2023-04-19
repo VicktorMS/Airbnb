@@ -13,7 +13,7 @@ function Banner() {
                 className='banner__searchButton' 
                 variant='outlined'
                 onClick={() => setShowSearch(!showSearch)}
-                >Pesquisar Datas
+                >{showSearch ? "Esconder": "Pesquisar Datas"}
             </Button>
         </div>
         <div className='banner__info'>
