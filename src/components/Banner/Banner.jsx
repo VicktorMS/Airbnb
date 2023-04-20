@@ -2,14 +2,24 @@ import React, { useState } from 'react';
 import { Button } from '@mui/material';
 import './Banner.css'
 import SearchDates from '/src/components/SearchDates/SearchDates';
+import { useNavigate } from "react-router-dom";
+
+
 
 function Banner() {
+    let navigate  = useNavigate();
+
+    function handleClick() {
+        navigate("/search");
+    }
+
     const [showSearch, setShowSearch] = useState(false);
     return (
     <div className='banner'>
         <div className='banner__search'>
             {showSearch && <SearchDates/>}
-            <Button 
+            <Button
+        
                 className='banner__searchButton' 
                 variant='outlined'
                 onClick={() => setShowSearch(!showSearch)}
@@ -21,7 +31,9 @@ function Banner() {
             <h5>
                 Planeje formas diferentes de fugir da rotina e descobrir novos lugares perto de você.
             </h5>
-            <Button variant='outlined'>
+            <Button 
+                onClick={handleClick} 
+                variant='outlined'>
                 Explore ao redor
             </Button>
         </div>
