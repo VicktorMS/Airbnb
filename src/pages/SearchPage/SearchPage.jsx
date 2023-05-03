@@ -2,6 +2,7 @@ import React from 'react'
 import './SearchPage.css'
 import { Button } from '@mui/material'
 import SearchResult from '/src/components/SearchResult/SearchResult'
+// TODO: Consumo de dados, estilização do material UI
 
 function SearchPage() {
   return (

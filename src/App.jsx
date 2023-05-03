@@ -5,27 +5,41 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
+const airBnbTheme = createTheme({
+  palette: {
+    mode: 'light',
+    primary: {
+      main: '#ff7779',
+    },
+    secondary: {
+      main: '#ffffff',
+    }
+  },
+});
 
 
 function App() {
   return (
     <>
-      <Router>
+      <ThemeProvider theme={airBnbTheme}>
+        <Router>
 
-        <Header/>
+          <Header/>
+          <main>
+            <Routes>
+              <Route path='/search' element={<SearchPage/>}/>
+                
+              <Route path='/' element={<Home/>}/>     
+            </Routes>
+          </main>
 
-        <Routes>
-          <Route path='/search' element={<SearchPage/>}/>
-            
-          <Route path='/' element={<Home/>}/>     
-        </Routes>
+          <Footer/>
 
-        <Footer/>
 
-      </Router>
-    
+        </Router>
+      </ThemeProvider>
     </>
   )
 }

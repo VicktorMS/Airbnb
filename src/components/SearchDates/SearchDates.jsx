@@ -21,17 +21,19 @@ function SearchDates() {
         endDate: endDate,
         key: "selection"
     }
-
+    
     function handleSelect(ranges) {
         setStartDate(ranges.selection.startDate);
         setEndDate(ranges.selection.endDate);
     }
-
+    
     return (
         <div className='searchDates'>
             <DateRangePicker 
                 ranges={[selectionRange]}
                 onChange={handleSelect}
+                months={2}
+                direction="horizontal"                
             />
             <h2>
                 Número de Hóspedes
