@@ -37,3 +37,9 @@
     margin-bottom: 8px;
 
 }
+
+@media screen and (max-width: 769px){
+    .card{
+        width: 100%;
+    }
+}

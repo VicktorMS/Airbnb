@@ -14,5 +14,33 @@ header{
 
 .header__icon{
     margin-top: 10px;
-    height: 100px;
+    max-height: 80px ;
+}
+
+.header__userArea{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header__userAvatar{
+    display: flex;
+    align-items: center;
+}
+.header__mobileMenu{
+    display: none;
+}
+@media screen and (max-width: 900px){
+    .header__userArea, .header__searchBar{
+        display: none;
+    }
+    header{
+        /* box-shadow: none; */
+        height: 80px;
+    }
+    
+    .header__mobileMenu{
+        display: block;
+    }
+    
 }

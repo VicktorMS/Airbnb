@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     setNavCards(navCardData);
     try {
-      fetch('/public/data/hosts.json')
+      fetch('/data/hosts.json')
         .then(response => response.json())
         .then(data =>{
           setHostsCards(data);

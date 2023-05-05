@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import LabelBottomNavigation from './components/BottomNavigation/BottomNavigation';
 
 const airBnbTheme = createTheme({
   palette: {
@@ -36,8 +37,8 @@ function App() {
           </main>
 
           <Footer/>
-
-
+          
+          <LabelBottomNavigation/>
         </Router>
       </ThemeProvider>
     </>

@@ -6,10 +6,28 @@ import Typography from '@mui/material/Typography';
 import './HomeCard.css';
 import { CardActionArea } from '@mui/material';
 
+import json2mq from 'json2mq';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useEffect, useState } from 'react';
+
+
 function HomeCard({src, title, description, price}) {
+  const [cardWidth, setCardWidth] = useState()
+
+
+  const matches = useMediaQuery(
+    json2mq({
+      maxWidth: 769,
+    }),
+  );
+
+  useEffect(() => {
+    matches ? setCardWidth('100%') : setCardWidth(345)
+}, [matches])
+
   return (
     <Card sx={{ 
-      width: 345, 
+      width: cardWidth, 
       margin:'20px',
        }}>
       <CardActionArea sx={{
