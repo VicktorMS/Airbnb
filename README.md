@@ -45,7 +45,7 @@
 
 ## 🛍️ Future Features
 
-This web application was designed for future API consumption receiving inputs from the date-range-picker component. In the future I would like to implement the search system, the react-query library and some animation techniques to make the app nicer and smoother.
+This web application was designed for future API consumption receiving inputs from the date-range-picker component. In the future I would like to implement the search system, the react-query library, CSS modules and some animation techniques to make the app nicer and smoother.
 
 ## 🏁 Getting Started
 
