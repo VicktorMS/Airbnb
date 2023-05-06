@@ -40,7 +40,7 @@ function HomeCard({src, title, description, price}) {
           image={src}
         />
         <CardContent>
-          <Typography subtitle='h2' >
+          <Typography subtitle='h3' >
             {price}
           </Typography>
           <Typography gutterBottom variant='h6' component='div'>
